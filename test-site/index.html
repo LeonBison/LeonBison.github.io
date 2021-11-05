@@ -1,0 +1,168 @@
+<DOCTYPE html>
+  <html>
+<h1 style="font-family:Avenir;"></h1>
+<p style="font-family:Avenir;"></p>
+    <head>
+      <style>
+        h1 {text-align: center;}
+         </style>
+      <meta charset="utf-8" />
+       <title>
+        This is a Test
+      </title>
+    </head>
+    <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("p").mouseover(function(){
+    $("p").css("background-color", "black");
+  });
+  $("p").mouseout(function(){
+    $("p").css("background-color", "white");
+  });
+  $("p:first-child").mouseover(function(){
+    $("p:first-child").css("background-color", "black");
+  });
+  $("p1").mouseout(function(){
+    $("p1").css("background-color", "white");
+  });
+  $("ul").mouseover(function(){
+    $("ul").css("background-color", "black");
+  });
+  $("ul").mouseout(function(){
+    $("ul").css("background-color", "white");
+  });
+});
+</script>
+<style>   p {
+  font-size: 30px;
+}</style>
+      <h1><style>
+        img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        </style>
+        Alex Christie Test Page</h1>
+      <img
+        src="images/Christie+Headshot.jpg"
+        alt="Christie performing origianl composition"
+      />
+      <p>
+         Notes on the agency of non-human actors. 
+        </p>
+        <ul>
+          <li>Andrea Neumann & Improvisation (Matthias Haenisch)</li>
+          <li>Latour/Law</li>
+          <li>Piekut/AACM</li>
+          <li>Kaiborg</li>
+          <li>Jon Ferguson and Imagined Agency</li>
+        </ul>
+        <p1>
+        What emerges is a need to distinguish between <a href="https://alexchristie.space/">my practice</a> of improvisation and my
+        practice of " composition.</a>
+      </p1>
+      <p>
+        ANT’s definition of agency is by far the clearest and most useful for understanding how technology plays an active and complex role in electro-acoustic and electronic performance. ANT’s definition is also, perhaps surprisingly, the most inclusive and concise definition, and while it leads to complexities, self-contradiction, and circular logic-chasing, I find it extraordinarily productive. It can be boiled down to two main points:
+
+        Agency is simply the ability to affect one’s environment.
+        All actors--human and non-human--possess agency.
+        
+        It is easy to misunderstand these points, and many have. ANT quickly appears cold and inhuman when granting agency to all things is viewed as an erasure of uniquely human qualities like intention, intelligence, and free will. ANT does indeed ignore these qualities, however, it does so in order to trace flows of power that result purely from action, rather than intention. However, ANT does not devalue humanness, but instead elevates the role and importance of non-human actors in every environment.
+        
+        A Drifting Agency
+        
+        As Piekut concludes, ANT is an effective mode of tracing the networks of actors that ended up influencing the AACM’s decision to remain an all-Black organization. In this specific case, the network includes human and non-human actors, a heterogenous network. The content mediated through printed publication and a human reporter carry (and translate) a message that is in turn interpreted by members of the AACM and incorporated into their decision-making process. For Piekut, this example illustrates Latour’s ideas of “translation and delegation” in addition to non-human agency, as all of these ANT concepts are, of course, interconnected. But Piekut also makes an important clarification about the nature of agency in the ANT context:
+        
+        “It is a drifting agency that translates action at great distances, but also becomes open to revision and interpretation in the course of this dispersal. Finally, this agency is deferred. It is not something that the Guild ‘had’ and then ‘used’ in a single, coherent moment. Rather, it unfolded fitfully in time and space.” (Piekut)
+        
+        ANT’s agency is a result of action. In this case, the copy of Downbeat is the non-human agent that helps connect the Guild and the AACM and leads to the AACM’s ultimate decision. It would be impossible to say that the issue of Downbeat intended this effect, but it seems undeniable that it did indeed contribute to, if not determine, the decision-making process. The Guild’s agency emerges through the acts of translation and mediation.
+        
+        While this musicological example helps to clarify what Latour means by “agency”, it also reiterates the difficulty of bringing an ANT perspective to the act of composition and performance. A “drifting agency” that “unfold(s)” requires a longer time scale than most musical works provide. Compressing this timeline into a single piece requires a different style of ANT perspective, one that focuses on interactive construction rather than analytical tracing.
+        </p>
+      <p>
+        <script>
+        document.write(Math.floor(Math.random() * 100) + 0) //generate random number between 0 and 100 on page load
+        </script>
+      </p>
+         </script>
+         <script src="assets/js/main.js"></script> 
+     <script>
+   let scrollerID;
+let paused = true;
+let speed = 3; // 1 - Fast | 2 - Medium | 3 - Slow
+let interval = speed * 1;
+console.log(3+5);
+console.log('3'+'5');
+function startScroll(){
+    let id = setInterval(function() {
+        window.scrollBy(0, 2);
+        console.log('window inner height is '+window.scrollY);
+          if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+            // Reached end of page
+            stopScroll();
+        }
+    }, interval);
+    return id;
+}
+
+function stopScroll() {
+    clearInterval(scrollerID);
+}
+setTimeout(() => {console.log("this is the first message")}, 5000);
+  setTimeout(() => {console.log("this is the second message")}, 3000);
+  setTimeout(() => {console.log("this is the third message")}, 1000);
+setTimeout(() => {startScroll()}, 5000);
+  // Output:
+
+  // this is the third message
+  // this is the second message
+  // this is the first message
+
+document.body.addEventListener('keypress', function (event)
+{
+    if (event.which == 13 || event.keyCode == 13) {
+        // It's the 'Enter' key
+        if(paused == true) {
+            scrollerID = startScroll();
+            paused = false;
+        }
+        else {
+            stopScroll();
+            paused = true;
+        }
+    }
+}, true);
+     </script>
+
+    </body>
+
+    <script type="text/javascript">
+      //
+      // Description: Randomly change background color every 2 seconds
+      //
+      // NewcWare 1997
+      // Author: Scott Newcomer 3/1997
+      // Email: nuke@bright.net
+      //
+      function setcolor() // changed this from background color to text color
+      {
+      window.setTimeout( "setcolor()", 1000); // 2000 milliseconds delay
+      var index = Math.round(Math.random() * 2); // changed "ColorValue" to "foo" to test myself with variables. reduced random choices.
+      var foo = "FFFFFF"; // default color - white (index = 0)
+      if(index == 1)
+      foo = "FFFFFF"; //white
+      if(index == 2)
+      foo = "000000"; //black
+      document.getElementsByTagName("body")[0].style.color = "#" + foo;
+      }
+      </script>
+      </html>
+      <body onload="setcolor();">
+
+
+
+  </html></DOCTYPE
+>

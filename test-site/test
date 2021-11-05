@@ -1,0 +1,65 @@
+<DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="utf-8" />
+        <title>This is a Test</title>
+      </head>
+      <body>
+        <h1>acres by Alex Christie and Ryan Ross Smith</h1>
+        <img
+          src="images/acres EP album cover.png"
+          alt="Album Cover: lots of blue"
+        />
+        <p>
+          Notes on the agency of non-human actors. 
+          <ul>
+            <li>Andrea Neumann & Improvisation (Matthias Haenisch)</li>
+            <li>Latour/Law</li>
+            <li>Piekut/AACM</li>
+            <li>Kaiborg</li>
+            <li>Jon Ferguson and Imagined Agency</li>
+          </ul>
+          What emerges is a need to distinguish between <a href="https://alexchristie.space/">my practice</a> of improvisation and my
+          practice of composition.</a>
+        </p>
+       <script src="assets/js/main.js"></script>
+       <script>
+     let scrollerID;
+  let paused = true;
+  let speed = 2; // 1 - Fast | 2 - Medium | 3 - Slow
+  let interval = speed * 5;
+  
+  function startScroll(){
+      let id = setInterval(function() {
+          window.scrollBy(0, 2);
+          if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+              // Reached end of page
+              stopScroll();
+          }
+      }, interval);
+      return id;
+  }
+  
+  function stopScroll() {
+      clearInterval(scrollerID);
+  }
+  
+  document.body.addEventListener('keypress', function (event)
+  {
+      if (event.which == 13 || event.keyCode == 13) {
+          // It's the 'Enter' key
+          if(paused == true) {
+              scrollerID = startScroll();
+              paused = false;
+          }
+          else {
+              stopScroll();
+              paused = true;
+          }
+      }
+  }, true);
+       </script>
+      </body>
+    </html></DOCTYPE
+  >
+  
