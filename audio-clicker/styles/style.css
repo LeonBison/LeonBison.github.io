@@ -1,0 +1,55 @@
+html {
+  font-size: 10px; /* px means "pixels": the base font size is now 10 pixels high  */
+  font-family: 'Yaldevi', sans-serif;; /* this should be the rest of the output you got from Google fonts */
+}
+body {
+    background-color: ghostwhite;
+  }
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 40px;
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 20px;
+    text-align: right;
+  }
+  
+  p, li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;    
+  }
+  
+  .censor,
+  span[class*="word"]{
+    background-color: black;
+  }
+
+  .ANTinterrupt,
+  span[class*="word"]{
+  font-style: italic;
+  text-align: center; 
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 1px;   
+    }
+
+    .boxed {
+      border: 1px solid rgb(128, 0, 102) ;
+      padding: 45%;
+    }
+
+    .exempt
+    span[class="word"]{
+      font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+    color: green;    
+    }
