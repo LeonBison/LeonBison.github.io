@@ -17,6 +17,7 @@ h1 {
     letter-spacing: 1px;    
   }
   
-  .censor {
+  .censor,
+  span[class*="word"]{
     background-color: black;
   }

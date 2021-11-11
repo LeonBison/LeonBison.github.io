@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+    <html>
+        <body>
+            <audio id="audioplayer"> <!-- can't get this to work in chrome because of some autoplay settings, i think -->
+            </audio>
+            
+            <script>
+                var lastSong = null;
+                var selection = null;
+                var playlist = ["background1.mp3", "background2.mp3", "background3.wav"]; // List of sounds
+                var player = document.getElementById("audioplayer"); // Get audio element
+                player.autoplay=true;
+                player.addEventListener("ended", selectRandom); // Run function when the sound ends
+            
+                function selectRandom(){
+                    while(selection == lastSong){ // Repeat until a different sound is selected
+                        selection = Math.floor(Math.random() * playlist.length);
+                    }
+                    lastSong = selection; // Remember the last sound
+                    player.src = playlist[selection]; // Tell HTML the location of the new sound
+                }
+            
+                selectRandom(); // Select initial sound
+                player.play(); // Start sound
+            </script>
+            <figure>
+                <figcaption>Play a Synth Sound:</figcaption>
+                <audio
+                    controls
+                    src="click1.mp3">
+                        Your browser does not support the
+                        <code>audio</code> element.
+                </audio>
+            </figure>
+            <script>
+            var audio = new Audio("audio-player/click3.mp3");
+                audio.play();
+                var audio = new Audio("click3.mp3");
+                document.onscroll = function() {
+  audio.play();
+}
+                
+                </script>
+                   </script>
+                   <figure>
+                       <figcaption>Play a Synth Sound:</figcaption>
+                       <audio
+                           controls
+                           src="click3.mp3">
+                               Your browser does not support the
+                               <code>audio</code> element.
+                       </audio>
+                   </figure>
+                   <script>
+                   var audio2 = new Audio("audio-player/click.mp3");
+                       audio.play();
+                       var audio2 = new Audio("click4.mp3");
+                       document.onclick = function() {
+         audio2.play();
+       }
+                       
+                       </script>
+                       <script>
+    var clicks = ["click1.mp3", "click2.mp3", "click3.mp3", "click4.mp3", "click5.mp3", "click6.mp3", "click7.mp3","click8.mp3"]
+    function getRandomClick() {
+    var max = clicks.length;
+    return Math.floor(Math.random() * (max + 1));
+   
+    $btn.on('mouseover', function(){
+  var index = getRandomAudio(); // random index
+  $clicks.attr('src', clicks[index]); // change src
+  $clicks.get(0).play();
+});
+}
+
+    </script>
+    <p>Disobedient Instruments &
+        the Agency of Non-Human Actors
+        
+        
+        
+        
+        The purpose of this chapter is to examine my work 27b/6. Specifically, I will discuss how 27b/6 develops and deploys its own agency through a multilayered identity (instrument, composition, and system) and through the use of intersecting media (sound, light, sculpture, and theater). In particular, this analysis will focus on the ways in which 27b/6 performs the human operator and reverses the traditional power structure between human performer and musical instrument. I consider this analysis to serve as an explanation of conceptual practice as well as a framework for new modes of composition and electronic music instrument design.
+        
+        27b/6 is perhaps best introduced by the textual component of its score. I specify textual because, as we shall see, 27b/6’s score is multimodal. The followings two pages contain the operating instructions that accompany 27b/6.
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        27b/6: OPERATING MANUAL
+        
+        - SETUP/INSTALLATION - - - - - - - - - - - - - - - - - - - - - - - - - 
+        27b/6 is usually staged but can also be performed in an office in which case the lights should be florescent.
+        
+        LIGHTS: low, almost blackout
+        
+        STAGE: 27b/6 is centerstage. A chair and coat rack stage right, the operator’s side.
+        
+        The operator must never have their jacket on when entering codes. The operator must always put on their jacket before approaching the reset switches. 
+        
+        The operator enters stage right, dressed in a suit for business, ignoring the audience. Medium gate, not rushing, not dragging, having just arrived at work. The operator removes their jacket and hangs it on the coat rack. They switch on 27b/6 and sit down, good posture.
+        
+        - OPERATION: SIDE A/SWITCH CODES - - - - - - - - - - - - - - - - - - -
+        27b/6 powers on, rising tone, a burst, and some sustained noise.
+        
+        Lightbulb 1 (stage right) begins to flash. Soon after, 27b/6 begins to make sound like the interference of a cellphone signal with studio electronics. This sequence of events indicate that the operator must enter a code. These are the possible codes:
+        
+        3 2 1
+        3 3 3 3 3
+        1 2 1 2 3
+        1 3 1 3 1 3
+        2 2 1 1 3 3
+        2 3 2 1 2 3	
+        1 2 3 2 3 1 1 2
+        2 3 3 3 1 1 2 3
+        
+        27b/6 will begin by randomly selecting from the first two codes listed above and will gradually expand the number of codes from which it chooses, moving down the list, until all codes are in play. The numbers correspond to the code switches (see diagram). The operator must throw the indicated switch only once per number.
+        
+        To reiterate, 27b/6 chooses a code at random. The operator does not know which code has been chosen or which codes are in play, and therefore it is imperative that they memorize the codes in order.
+        
+        After entering the code, the operator must hit the “submit” switch (switch 4) within 3 seconds or else the code will be registered as an incorrect submission.
+        
+        When the operator enters a code, there are two possible outcomes:
+        
+        The code is incorrect. 27b/6 makes a negative sound and an additional layer of noise is added to the texture. When this happens, the operator must try another code until they enter the correct code.
+        The code is correct, 27b/6 makes an affirmative sound, and the rest of sound and lights stop. Silence. The operator sits back down (reaching the codes requires standing, at least a little bit). Soon, 27b/6 will request another code.
+        
+        
+        - OPERATION: SIDE B/RESET SWITCHES - - - - - - - - - - - - - - - - - -
+        At some point during operation lightbulb 2 (stage left) begins to flash and another layer of sound is added to the texture. This means that 27b/6 has disabled the operator’s controls and they can no longer enter switch codes. The operator must follow the following procedure in order to re-enable the switch code controls: 
+        
+        Stand up and put on your jacket. 
+        Walk, without hurry to the other side of 27b/6 (stage left). There you will find 3 switches (the reset switches) spread farther apart than the 4 by the chair (code switches, stage right).
+        One of the reset switches will re-enable the controls for entering switch codes however, there are three things to keep in mind:
+        27b/6 has randomly selected the one reset switch that will re-enable the controls for entering switch codes.
+        The reset switches are on average only 5% effective, therefore the operator will most likely not be sure that they have selected the correct switch until it’s been thrown several times. The operator may need to try all three reset switches.
+        The reset switches will sometimes make sound; the operator should not rely on this as conveying any useful information.
+        
+        Once the correct reset switch has been successfully enabled, sound and light stop, and the operator returns to their original station to enter more switch codes. They must first remove their jacket before sitting down.
+        
+        At any point, 27b/6 will once again disable the operator’s controls. This will continue throughout the duration of the piece. Whenever this happens, the operate must follow the above instructions.
+        
+        - SHUTDOWN - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+        Eventually, 27b/6 will shut itself down. At this point, the operator stands up, puts on their jacket, and exits stage right. Work is over.
+        
+        The following pages of this operating manual contain helpful diagrams and inspection logs.
+        
+        
+        [end 27b/6 operating manual excerpt]
+        Excerpt from a paper presentation on the compositional affordances of the Sisyphone, presented at the Institute for Reconfigured Intervention and Spatial Modalities Conference (year unknown).
+        
+        Dr. So-And-So: “It’s a cool idea… and the construction is really interesting. I wonder if you’ve considered turning it into a two-person performance with one person on each side. I think you might be able to perform it more efficiently and get at some much more dynamic musical phrases. There are a lot of pauses… silences… when we have to wait for that single performer to walk back down the instrument. You’d get more agility with two people, maybe even some virtuosic exchanges between them. No breaks in the sound.”
+        
+        
+        27b/6 is the instrument, composition, and system. Its situation does not give rise to high resolution music gesture. Rather, it’s function and its priority is entering low resolution information into the electronic system. The purpose of that gesture is not pointed at the performer or sound but at the system in order to allow the system to develop its own agency. Instead, the human operator uses a set of binary switches to enter specific, non-musical information into a system. The system then analyzes and processes this information in order to determine performance activities. The teleology of 27b/6, as well as the human’s role, is intentionally unclear. In one sense, the objective is to disable the sound being produced and “turn off” the instrument. But really this silencing is just a byproduct of the nature of the system/instrument/composition rather than a demonstration of successful human performance. The instrument will switch itself back on, no matter how many times the performer silences it, demonstrating its (bureaucratic) power time and time again. 27b/6 is a 
+        system that is designed to run indefinitely and allows for no change to or progress away from its modus operandi. It maintains its own specific functionality and imposes its logic upon the human performer.
+        Fig. Something - 27b/6 Segment 1 (operator’s side), top view of code switches and lightbulb. Small, unlabeled circle is a mistake.
+        
+        
+        
+        The Intermedia
+        
+        27b/6’s logic and its relationship to the human performer (as described above) is expressed through the interaction of four media: sound, light, sculpture, and theater.
+        
+        As the operator enters switch codes, sound cues clearly indicate “correct” and “incorrect”submissions, borrowing their language from contemporary mobile and computer technology. The accumulation of sound that results from a string of incorrect switch codes is chaotic and messy. This sonic texture is complex, a combination of processed samples and  digital synthesis. The operator, however, does not have any control over the shaping of the output. Their actions may contribute to the sonic performance by occasionally initiating a change in the sound world, but they do not determine form, shape, or gesture in any traditionally artistic or expressive manner.
+        [need some some technical “how this works” and big citation/comparison of contemporary trends here]
+        Fig. Something - Diagram of the flows of information and resulting actions in 27b/6
+        
+        
+        [need to actually write this next stuff out, just bullet points for now]
+        Light and Sculpture
+        Score excerpt above is only part of a multimodal score. The light and sculpture of 27b/6 are as much a part of the score. They guide operator action and direct attention (performer and audience).
+        Actor-Network Theory’s definition of agency is excitingly useful for understanding how technology plays an active and complex role in electroacoustic and electronic performance. ANT’s definition is also, perhaps surprisingly, the most inclusive and concise definition, and while it leads to complexities, self-contradiction, and circular logic-chasing, I find it extraordinarily productive. It can be boiled down to two main points:
+        
+        Agency is simply the ability to affect one’s environment.
+        All actors—human and non-human—possess agency.
+        
+        It is easy to misunderstand these tenets. ANT quickly appears cold and inhuman if granting agency to all things is viewed as an erasure of uniquely human qualities like intention, consciousness, and free will. ANT does indeed ignore these qualities, however, it does so in order to trace flows of power that result purely from action, rather than intention. However, ANT does not devalue humanness, but instead elevates the role and importance of non-human actors in every environment. [Latour and Law]
+          {inhuman when granting agency to all things is viewed as an erasure of uniquely human qualities like intention, intelligence, and free will. ANT does indeed ignore these qualities, however, it does so in order to trace flows of power that result purely from action, rather than intention. However, ANT does not devalue humanness, but instead elevates the role and importance of non-human actors in every environment.
+        Length of instrument affords long walk and a designation of specific locations with specific actions. Theater allows for humor and reference to other media (film, stage)
+        Light casts shadows, projects movement, and illuminates the face/body. Colors the physical, architectural space. 
+        This all emphasizes the physical presence of 27b/6.
+        The instrument is very long. It makes you walk but also shows you where to go. It directs the operator. It, like the lights, is part of a multimodal score
+        [the design of everyday objects]/[Gibson affordances]
+        
+        Not only does 27b/6 ignore the human’s commands, it also disables their means of input. During these moments, the performer must walk the 18 feet to the other end of the instrument and engage with another set of switches in hopes of re-enabling their input mechanism. 27b/6 performs the human, moving them through physical space. The physical construction of 27b/6 determines the performer’s path. While this choreography is part of the theater of the piece, it is not optional nor is it an interpretive expression of the performer’s artistic ideals. The performer’s pedestrian movement is not a coloration of musical gesture. It is not an exaggerated knob turn or dramatic button push (nothing wrong with that) nor is it a virtuosic demonstration of successful coding in which a circle in the air creates some sort of sonic circle [make this last part less mean]. Theater emerges as a performative force resulting from the intermedia, the heterogeneous network of actors and information.
+        
+        
+        Power & Instrument Design
+        
+        The interactions of the media described above form the ways in which 27b/6 expresses its relationship with the performer in physical space. In most musical performances the human performer controls their instrument through a physical interface. The human moves their body in some way in order to tell the instrument what sounds to make. In the universe of NIMEs and electroacoustic performance practice, the translation of expressive human movement to expressive electronic sound is championed, perhaps even fetishized. [more NIME stuff here]. In general, we can imagine the human-instrument relationship as taking the following forms in which the arrow indicates who is acting and who is acted upon:
+        
+        
+        
+        I have highlighted what I believe to be the most common configuration. Of course, an interesting instrument and interesting performer might participate in two or all three of these configurations at once, perhaps to varying degrees. We can imagine this relationship between performer and instrument as a parameter of composition, something that evolves
+        A Drifting Agency
+        
+        As Piekut concludes, ANT is an effective mode of tracing the networks of actors that ended up influencing the AACM’s decision to remain an all-Black organization. In this specific case, the network includes human and non-human actors, a heterogenous network. The content mediated and translated through printed publication and a human reporter carry a message that is in turn interpreted by members of the AACM and incorporated into their decision-making process. For Piekut, this series of events illustrates Latour’s ideas of translation and delegation in addition to the over-arching concept of non-human agency.  But Piekut also makes an important clarification about the nature of agency in the ANT context: [consolidate this so it needs less explanation]
+        
+        “It is a drifting agency that translates action at great distances, but also becomes open to revision and interpretation in the course of this dispersal. Finally, this agency is deferred. It is not something that the Guild ‘had’ and then ‘used’ in a single, coherent moment. Rather, it unfolded fitfully in time and space.” (Piekut)
+        
+        ANT’s version of agency is a result of action. In this case, the copy of Downbeat is the non-human agent that helps connect the Guild and the AACM and leads to the AACM’s ultimate decision. It would be impossible to say that the issue of Downbeat intended this effect, but it seems undeniable that it did indeed contribute to, if not determine, the decision-making process. The Guild’s agency emerges through the acts of translation and mediation and is seen only in its effects.
+        
+        While this musicological example helps to clarify what Latour means by “agency”, it also reiterates the difficulty of bringing an ANT perspective to the act of composition and performance. A “drifting agency” that “unfold(s)” requires a longer time scale than most musical works provide. Compressing this timeline into a single piece requires a different style of ANT-agency, one that deploys interactive construction rather than analytical tracing. Or perhaps this mode of construction is simply the reverse-engineering of the act of tracing, the assemblage of a network that allows for the flows of heterogeneous forms of information. over the course of performance or is expressed in different ways throughout a piece.
+        
+        Unlike most musical instruments, 27b/6 is not controlled by the human performer (performer-instrument configuration 1). In 27b/6 most of the human’s sound-focused actions are either deemed incorrect or are entirely ignored by the instrument/system. In this way 27b/6 is a disobedient instrument in that it does not function in service of the performer. But, what is most interesting and more integral to the identity of this piece is the way in which the instrument reaches beyond insubordination and actually dictates the human’s physical actions. 27b/6 demands physical actions from the performer that create sound, light, and theater, thereby composing the form of the piece in realtime. [Bowers performance ecology, accumulation of stuff in the scene]
+        
+        In these ways, the composition is composed in realtime and realspace by 27b/6 itself. Sound, light, sculpture, and theater reveal and develop the power dynamics between all of the actors in the piece: the composition (27b/6), the instrument (27b/6), the electronic system (27b/6), and the human performer (operator). These actors form a network (an, ahem, actor-network) through which information flows in different forms, determining and reshaping the relationships between said actors. This actor-network itself is the piece and power is parameterized as an element of composition in the same way pitch, rhythm, texture, etc. have been parameterized in the composition of centuries worth of music music. As the piece progresses through time, we realize that 27b/6 possesses the most power in this network, but this is only made clear by observing the effects of 27b/6’s actions, specially its actions in relation to other actors. 27b/6’s performing of the human is a direct reversal of the traditional configuration of the performer-instrument relationship.
+        
+         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        [end of text for Ted]
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        This is possible because of technology. While Kirby is concerned with new sound worlds, it’s equally, if not more important to realize what those sound worlds do to composition. They need not be only the result themselves. They need not simply point to/reference non-musical ideas. They can sculpt relationships between things in front of our very eyes and ears and pull more human compositional parameters into the performance ecology, parameters that reach behind the world of the specific piece. We see what the things do.
+        
+        
+        [Beckett’s Quad - vector analysis, kinesthetic empathy]
+            -vector - turning it into a system (or finding the system there) removes agency of performers (agency by a certain definition). I would argue it removes the traditional assumed agency attributed to human performances and showcases an ANT agency based on action, not intention.
+            -kinesthetic empathy
+            -References to science that have been used to favor expressive musical control (mirror neurons). In the case of 27b/6 the kinesthetic empathy is felt in the walking, or non-sound producing actions. The same redefinition of agency in Quad leads to a different kind of kinesthetic empathy for a different kind of performance practice. These reconfigure the relationship between human and instrument.
+        
+        NIME references to expressivity, interface design, etc.
+        First agency intervention X
+        Technical stuff about the instrument/system
+        Page before score
+        
+        The instrument defines the compositional form.
+        
+        27b/6 is the parameterization of power expressed through sound, light, and theater.
+        
+        The switches make acoustic sound. So does the walking (Sometimes).
+        
+        Example: knob turn and button push theater
+        Example: gameTrak theater
+        Example: 27b/6 theater (Beckett, Gilliam, Lem)
+        
+        Parameterization of power because power reaches beyond music and exists in more complex forms than the human-instrument mastery.
+        
+        [translation and mediation]
+        Sound expresses the state of the system 
+            -correct v. Incorrect performer action
+        Light expresses the sate of the system
+            -with what part of the instrument the performer must engage
+        Instrument dictates the compositional form of the piece through sculpture
+            -it tells us how to use it, good design (design of everyday objects citation)
+        
+        Excerpt from a paper presentation on the compositional affordances of the Sisyphone, presented at The Institute for Reconfigured Intervention and Spatial Modalities Conference (year unknown).
+        
+        Dr. So-And-So: “This is a conference for music. I like your piece… and I get it, but it’s not music.”
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        [need to actually write this next stuff out, just bullet points for now]
+        Light and Sculpture
+        Score excerpt above is only part of a multimodal score. The light and sculpture of 27b/6 are as much a part of the score. They guide operator action and direct attention (performer and audience).
+        Length of instrument affords long walk and a designation of specific locations with specific actions. Theater allows for humor and reference to other media (film, stage)
+        Light casts shadows, projects movement, and illuminates the face/body. Colors the physical, architectural space. 
+        This all emphasizes the physical presence of 27b/6.
+        The instrument is very long. It makes you walk but also shows you where to go. It directs the operator. It, like the lights, is part of a multimodal score
+        [the design of everyday objects]/[Gibson affordances]
+        
+        Light and sculpture work in together in close synchronicity. The two lightbulbs direct the operator’s actions, signaling the type of action require through changes in brightness (blinking versus solid) and where to move to based on location (Segment 1 or Segment 4-6). The length of the 27b/6 requires clear directions, facilitated by the lightbulbs, and also acts in the direction of action, composition of theater, and composition of form.
+        
+        I mentioned early on that the textual score excerpt is merely part of the multimodal whole. The instrument itself, along with it’s light-based components, cues performer action in realtime, participating as a sculptural and visual score with the even greater presence than the text. In fact, the textual instructions are primarily performance notes, a description of how to interpret the actual score.
+        
+        27b/6’s sculptural properties also produce acoustic sound. The heavy switches make audible clicks and sculpturally dictated walking produces footsteps. Similarly, the lightbulbs serve aesthetic purposes as well as the purely functional. They cast shadows, illuminate the performer’s actions and attention, and emphasize the specific architectural space of performance.</p>    
+    
+    </body>
+    </html>

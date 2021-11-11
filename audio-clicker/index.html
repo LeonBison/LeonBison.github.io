@@ -58,77 +58,79 @@
     playerBG.play(); // Start sound
 </script>
 
-<!-- change text color with mouse action (want to change this to button, I think) -->
+<!-- this button turn text to white until next button -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 <script>
 $(document).ready(function(){
-  $("p").mouseover(function(){
-    $("p").css("color", "black");
-  });
-  $("p").mouseout(function(){
-    $("p").css("color", "white");
+   $('section button').siblings().css('color', 'white');
 
-  });
+   var number = randomNumber();
+   var clickCounter = 0;
+
+   $('button').click(function(){
+       clickCounter++;
+       console.log(clickCounter);
+
+       if (clickCounter > number) {
+           $(this).siblings().css('color', 'black');  
+           clickCounter = 0;
+           number = randomNumber();     
+        }
+    });
 });
 
+function randomNumber(min=5, max=20){
+    var number = Math.floor(Math.random() * (max - min) + min);
+    console.log(number);
+    return number;
+}
+// this is the end of the button randomness
 
 </script>
-        </html>
     <h1>
         Disobedient Instruments &
         the Agency of Non-Human Actors
     </h1>
         
-    <div>
-        <button id="toBlack">Reveal Text</button>
-        <button id="toWhite">Hide Text</button>
-        <p id="output_text"> The purpose of this chapter is to examine my work <a href="https://player.vimeo.com/video/285544334?h=bf6da07b3b">27b/6</a>. Specifically, I will discuss how 27b/6 develops and deploys its own agency through a multilayered identity (instrument, composition, and system) and through the use of intersecting media (sound, light, sculpture, and theater). In particular, this analysis will focus on the ways in which <span class='exempt'>27b/6</span> performs the human operator and reverses the traditional power structure between human performer and musical instrument. I consider this analysis to serve as an explanation of conceptual practice as well as a framework for new modes of composition and electronic music instrument design.
+    <section>
+        <button>Show Text</button>
+        <p> The purpose of this chapter is to examine my work <a href="https://player.vimeo.com/video/285544334?h=bf6da07b3b">27b/6</a>. Specifically, I will discuss how 27b/6 develops and deploys its own agency through a multilayered identity (instrument, composition, and system) and through the use of intersecting media (sound, light, sculpture, and theater). In particular, this analysis will focus on the ways in which <span class='exempt'>27b/6</span> performs the human operator and reverses the traditional power structure between human performer and musical instrument. I consider this analysis to serve as an explanation of conceptual practice as well as a framework for new modes of composition and electronic music instrument design.
 
             27b/6 is perhaps best introduced by the textual component of its score. I specify textual because, as we shall see, 27b/6’s score is multimodal. The followings two pages contain the operating instructions that accompany 27b/6.</p>
-    </div>
+        </section>
     <script>
 
-        document.getElementById("toBlack").onclick = function () {
-            document.getElementById("output_text").style.color = 'black';
-        }
-
-        document.getElementById("toWhite").onclick = function () {
-            document.getElementById("output_text").style.color = 'white';
-        }
-
     </script>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+           
        <h2>
         27b/6: OPERATING MANUAL
         </h2>
         <h3>
         > - - - - SETUP/INSTALLATION - - - - - - - - - - - - - - - - - - - - - - - - - </h3>
         <p>
-        27b/6 is usually staged but can also be performed in an office in which case the lights should be florescent.
-        
+                    <!-- I want another button here -->
+<section>
+    <button>Show Text</button>
+      <p> 27b/6 is usually staged but can also be performed in an office in which case the lights should be florescent.
+      </p> 
+      <p>    
         LIGHTS: low, almost blackout
-        
+    </p> 
+    <p>
         STAGE: 27b/6 is centerstage. A chair and coat rack stage right, the operator’s side.
-        
+    </p> 
+    <p>
         The operator must never have their jacket on when entering codes. The operator must always put on their jacket before approaching the reset switches. 
-        
+    </p> 
+    <p>
         The operator enters stage right, dressed in a suit for business, ignoring the audience. Medium gate, not rushing, not dragging, having just arrived at work. The operator removes their jacket and hangs it on the coat rack. They switch on 27b/6 and sit down, good posture.
-        
+    </p> 
+
+ </section>       
         <h3> > - - - -  OPERATION: SIDE A/SWITCH CODES - - - - - - - - - - - - - - - - - - -</h3>
+<section>
+    <button>Show Text</button>
+
         <p>
         27b/6 powers on, rising tone, a burst, and some sustained noise.
         
@@ -156,8 +158,11 @@ $(document).ready(function(){
         The code is incorrect. 27b/6 makes a negative sound and an additional layer of noise is added to the texture. When this happens, the operator must try another code until they enter the correct code.
         The code is correct, 27b/6 makes an affirmative sound, and the rest of sound and lights stop. Silence. The operator sits back down (reaching the codes requires standing, at least a little bit). Soon, 27b/6 will request another code.
         </p>
-        
+    </section>       
+
        <h3>> - - - - OPERATION: SIDE B/RESET SWITCHES - - - - - - - - - - - - - - - - - -</h3>
+       <section>
+        <button>Show Text</button>
        <p>
        At some point during operation lightbulb 2 (stage left) begins to flash and another layer of sound is added to the texture. This means that 27b/6 has disabled the operator’s controls and they can no longer enter switch codes. The operator must follow the following procedure in order to re-enable the switch code controls: 
         
@@ -172,7 +177,11 @@ $(document).ready(function(){
         
         At any point, 27b/6 will once again disable the operator’s controls. This will continue throughout the duration of the piece. Whenever this happens, the operate must follow the above instructions.
        </p>
+    </section>
+
        <h3> > - - - - SHUTDOWN - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </h3>
+       <section>
+        <button>Show Text</button>
        <p> 
        Eventually, 27b/6 will shut itself down. At this point, the operator stands up, puts on their jacket, and exits stage right. Work is over.
         
@@ -190,10 +199,12 @@ $(document).ready(function(){
         Fig. Something - 27b/6 Segment 1 (operator’s side), top view of code switches and lightbulb. Small, unlabeled circle is a mistake.
        </p>
         
-        
+    </section>
        <h2> The Intermedia</h2>
-       <p>
-        
+       <section>
+           <button>Show Text</button>
+    <p>
+    
         27b/6’s logic and its relationship to the human performer (as described above) is expressed through the interaction of four media: sound, light, sculpture, and theater.
         
         As the operator enters switch codes, sound cues clearly indicate “correct” and “incorrect”submissions, borrowing their language from contemporary mobile and computer technology. The accumulation of sound that results from a string of incorrect switch codes is chaotic and messy. This sonic texture is complex, a combination of processed samples and  digital synthesis. The operator, however, does not have any control over the shaping of the output. Their actions may contribute to the sonic performance by occasionally initiating a change in the sound world, but they do not determine form, shape, or gesture in any traditionally artistic or expressive manner.
@@ -225,10 +236,14 @@ $(document).ready(function(){
         Not only does 27b/6 ignore the human’s commands, it also disables their means of input. During these moments, the performer must walk the 18 feet to the other end of the instrument and engage with another set of switches in hopes of re-enabling their input mechanism. 27b/6 performs the human, moving them through physical space. The physical construction of 27b/6 determines the performer’s path. While this choreography is part of the theater of the piece, it is not optional nor is it an interpretive expression of the performer’s artistic ideals. The performer’s pedestrian movement is not a coloration of musical gesture. It is not an exaggerated knob turn or dramatic button push (nothing wrong with that) nor is it a virtuosic demonstration of successful coding in which a circle in the air creates some sort of sonic circle [make this last part less mean]. Theater emerges as a performative force resulting from the intermedia, the heterogeneous network of actors and information.
         
         </p>
+    </section>
+
         <h2>
         Power & Instrument Design
     </h2>
-        <p>
+    <section>
+        <button>Show Text</button>
+                <p>
         The interactions of the media described above form the ways in which 27b/6 expresses its relationship with the performer in physical space. In most musical performances the human performer controls their instrument through a physical interface. The human moves their body in some way in order to tell the instrument what sounds to make. In the universe of NIMEs and electroacoustic performance practice, the translation of expressive human movement to expressive electronic sound is championed, perhaps even fetishized. [more NIME stuff here]. In general, we can imagine the human-instrument relationship as taking the following forms in which the arrow indicates who is acting and who is acted upon:
         
         
@@ -256,6 +271,8 @@ $(document).ready(function(){
         Unlike most musical instruments, 27b/6 is not controlled by the human performer (performer-instrument configuration 1). In 27b/6 most of the human’s sound-focused actions are either deemed incorrect or are entirely ignored by the instrument/system. In this way 27b/6 is a disobedient instrument in that it does not function in service of the performer. But, what is most interesting and more integral to the identity of this piece is the way in which the instrument reaches beyond insubordination and actually dictates the human’s physical actions. 27b/6 demands physical actions from the performer that create sound, light, and theater, thereby composing the form of the piece in realtime. [Bowers performance ecology, accumulation of stuff in the scene]
         
         In these ways, the composition is composed in realtime and realspace by 27b/6 itself. Sound, light, sculpture, and theater reveal and develop the power dynamics between all of the actors in the piece: the composition (27b/6), the instrument (27b/6), the electronic system (27b/6), and the human performer (operator). These actors form a network (an, ahem, actor-network) through which information flows in different forms, determining and reshaping the relationships between said actors. This actor-network itself is the piece and power is parameterized as an element of composition in the same way pitch, rhythm, texture, etc. have been parameterized in the composition of centuries worth of music music. As the piece progresses through time, we realize that 27b/6 possesses the most power in this network, but this is only made clear by observing the effects of 27b/6’s actions, specially its actions in relation to other actors. 27b/6’s performing of the human is a direct reversal of the traditional configuration of the performer-instrument relationship.
+    </section>
+
         
          
         
@@ -272,3 +289,5 @@ $(document).ready(function(){
         </head>
     </body>
     </html>
+
+    <!-- mark up entire page with buttons and upload to github, finish by Wednesday -->
