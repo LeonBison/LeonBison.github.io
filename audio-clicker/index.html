@@ -7,86 +7,57 @@
             </title>
             <link href="styles/style.css" rel="stylesheet">
             <link href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap" rel="stylesheet">
-        <body>
-            <audio id="audioplayer"> <!-- can't get this to work in chrome because of some autoplay settings, i think -->
-            </audio>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
             <script>
-                var lastSound = null;
-                var selection = null;
-                var playlist = ["click1.mp3", "click2.mp3", "click3.mp3", "click4.mp3", "click5.mp3", "click6.mp3", "click7.mp3", "click8.mp3"]; // List of sounds
-                var player = document.getElementById("audioplayer"); // Get audio element
-                player.autoplay=true;
-            
-                function selectRandom(){
-                    while(selection == lastSound){ // Repeat until a different sound is selected
-                        selection = Math.floor(Math.random() * playlist.length);
-                    }
-                    lastSound = selection; // Remember the last sound
-                    player.src = playlist[selection]; // Tell HTML the location of the new sound
+                $(document).ready(function(){
+
+                    // Audio effects. Background and clicking.
+                    var playlistBG = ["background1.mp3", "background2.mp3", "background3.wav"]; // List of sounds 
+                    var playlist = ["click1.mp3", "click2.mp3", "click3.mp3", "click4.mp3", "click5.mp3", "click6.mp3", "click7.mp3", "click8.mp3"]; // List of sounds
+                    var clickPlayer = $("#clickPlayer"); // Get audio element
+                    var bgPlayer = $('#bgPlayer');
+
+                    $(document).click(function(){
+                        var randomFile=randomFromArray(playlist);
+                        clickPlayer.src=randomFile;
+                        console.log(randomFile);
+                    });
+
+                    // <!-- this button turn text to white until next button -->
+                    $('section button').siblings().css('color', 'white');
+
+                    var number = randomNumber();
+                    var clickCounter = 0;
+
+                    $('button').click(function(){
+                        clickCounter++;
+                        console.log(clickCounter);
+
+                        if (clickCounter > number) {
+                            $(this).siblings().css('color', 'black');  
+                            clickCounter = 0;
+                            number = randomNumber();     
+                        }
+                    });
+                });
+                
+                // Utility functions we can use anywhere!
+                function randomNumber(min=5, max=20){
+                    var number = Math.floor(Math.random() * (max - min) + min);
+                    console.log(number);
+                    return number;
                 }
-            
-                selectRandom(); // Select initial sound
-                player.play(); // Start sound
-                document.onclick = selectRandom()
 
+                function randomFromArray(array) {
+                    return array[Math.floor(Math.random() * array.length)];
+                }
+
+            // this is the end of the button randomness
             </script>
-        <script>
-        document.onclick = function(){selectRandom()}
-        </script>
+        </head>
+        <body>
+        <audio id="clickPlayer" autoplay src='click1.mp3'></audio>
 
-
-
-<audio id="audioplayerBG"> <!-- can't get this to work in chrome because of some autoplay settings, i think -->
-</audio>
-<script>
-    var lastBG = null;
-    var BG = null;
-    var playlistBG = ["background1.mp3", "background2.mp3", "background3.wav"]; // List of sounds
-    var playerBG = document.getElementById("audioplayerBG"); // Get audio element
-    playerBG.autoplay=true;
-    playerBG.addEventListener("ended", selectRandomBG); // Run function when the sound ends
-
-
-    function selectRandomBG(){
-        while(BG == lastBG){ // Repeat until a different sound is selected
-            BG = Math.floor(Math.random() * playlistBG.length);
-        }
-        lastBG = BG; // Remember the last sound
-        playerBG.src = playlistBG[BG]; // Tell HTML the location of the new sound
-    }
-    selectRandomBG(); // Select initial sound
-    playerBG.play(); // Start sound
-</script>
-
-<!-- this button turn text to white until next button -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-<script>
-$(document).ready(function(){
-   $('section button').siblings().css('color', 'white');
-
-   var number = randomNumber();
-   var clickCounter = 0;
-
-   $('button').click(function(){
-       clickCounter++;
-       console.log(clickCounter);
-
-       if (clickCounter > number) {
-           $(this).siblings().css('color', 'black');  
-           clickCounter = 0;
-           number = randomNumber();     
-        }
-    });
-});
-
-function randomNumber(min=5, max=20){
-    var number = Math.floor(Math.random() * (max - min) + min);
-    console.log(number);
-    return number;
-}
-// this is the end of the button randomness
-
-</script>
     <h1>
         Disobedient Instruments &
         the Agency of Non-Human Actors
