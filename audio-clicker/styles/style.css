@@ -46,10 +46,19 @@ h1 {
       padding: 45%;
     }
 
-    .exempt
+    .exempt,
     span[class="word"]{
       font-size: 16px;
     line-height: 2;
     letter-spacing: 1px;
-    color: green;    
+    color: black;    
     }
+
+    .quoteInterrupt,
+    span[class*="word"]{
+      font-style: italic;
+      text-align: right; 
+      font-size: 14px;
+      line-height: .5;
+      letter-spacing: 1px;   
+        }

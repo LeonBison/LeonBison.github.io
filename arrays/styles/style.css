@@ -1,0 +1,30 @@
+html {
+  font-size: 32px; /* px means "pixels": the base font size is now 10 pixels high  */
+  font-family: 'Yaldevi', sans-serif;; /* this should be the rest of the output you got from Google fonts */
+  scroll-behavior: smooth;
+}
+body {
+    background-color: ghostwhite;
+  }
+
+h1 {
+    font-size: 60px;  
+    text-align: center;
+  }
+  
+  p, li {
+    font-size: 20px;
+    line-height: 2;
+    letter-spacing: 1px;  
+    text-align: left;  
+  }
+  
+  .censor {
+    background-color: black;
+  }
+
+  .repeat1 {
+    background-color: rgb(178, 154, 228);
+    font-size: 20px;
+
+  }

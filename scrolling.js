@@ -17,13 +17,12 @@ $win.scroll(function () {
 $('body').click(function() {
     var documentHeight = $(document).height();
     var timers = [10000,30000,50000,5000];
-    var scrollDirections = [0, documentHeight];
+    var direction = randomNumber(0, documentHeight);
     var timer = randomFromArray(timers);
-    var direction = randomFromArray(scrollDirections);
 
     console.log($(window).scrollTop());
     
-    $("html").stop().delay(5000).animate({ scrollTop: direction }, timer);
+    $("html").stop().delay(5000).animate({ scrollTop: direction}, timer);
 
 });
 
