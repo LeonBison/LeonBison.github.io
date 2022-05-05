@@ -1,0 +1,55 @@
+html {
+  font-size: 26px; /* px means "pixels": the base font size is now 10 pixels high  */
+  font-family: 'Yaldevi', sans-serif;; /* this should be the rest of the output you got from Google fonts */
+  scroll-behavior: smooth;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+body {
+    background-color: ghostwhite;
+  }
+
+h1 {
+    font-size: 60px;  
+    text-align: center;
+  }
+  
+  p, li {
+    font-size: 26px;
+    line-height: 2;
+    letter-spacing: 1px;  
+    text-align: left;  
+  }
+  
+  .censor {
+    background-color: black;
+  }
+
+  .repeat1, .random1 {
+    background-color: rgb(178, 154, 228);
+    font-size: 26px;
+    word-wrap: break-word;
+
+  }
+
+  .random2 {
+    font-size: 26px;
+    word-wrap: break-word;
+
+  }
+
+  #coloredSlider {
+    float: left;
+    clear: left;
+  width: 1200px;
+    margin: 15px;
+  }
+  #coloredSlider .ui-slider-range { 
+    background: #ff0000; 
+  }
+  
+  #coloredSlider .ui-state-default, .ui-widget-content .ui-state-default {
+    background: none;
+    background-color: green;
+  }
+  

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8" />
+      <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+      <link href="styles/style.css" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Yaldevi:wght@200&display=swap" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+</head>
+<body>
+  <h1>Chapter 01 Section 01</h1>
+  <div id="coloredSlider"></div>
+  <br>
+  <br>
+<script>
+
+// Generate a random number for the page auto-refresh;
+var refreshRate = Math.random(10000)*30000+5000;
+
+setTimeout(function(){
+   window.location.reload(1);
+}, refreshRate);
+
+console.log("RR", refreshRate);
+
+
+var text = 'System Blocks Signal Blocks System (SBSBS) is a photosonic piece for real-time electronic sound and interactive lights. There are several actants at work in SBSBS including a Max patch, a Korg Volca Beats drum machine, effects pedals, a MIDI controller, lightbulbs, and the human performer. These actants produce different types of signals that, when linked together, create a dynamic system of information. These signals and system interrupt, redirect, and block each other’s actions, altering the overall state of the assemblage (Jane Bennette, Deleuze). In this sense, SBSBS is as much an intermedia environment of distributed agency [source Paul Stapleton] as it is a musical composition. The photosonic output is a byproduct of system and actant agency and shifting power between actants.';
+
+var words=text.trim().split(" ");//words creates array of words after each space
+
+// var random_word = Math.floor(Math.random() * words.length);
+// var repeat = random_word + Math.floor(10);
+
+console.log(words);
+
+// console.log(word, text[word]);
+// console.log("repeat",repeat);
+
+// document.write(text);
+
+// Generate x number of random numbers based on lenth of words;
+var random_numbers = [];
+while(random_numbers.length < 2){
+    var r = Math.floor(Math.random() * words.length) + 1;
+    if(random_numbers.indexOf(r) === -1) random_numbers.push(r);
+}
+console.log(random_numbers);
+
+// random span color
+var refreshRate = Math.random(10000)*30000+5000;
+
+// looping words array
+for (let i = 0; i <= words.length; i++){
+  if (words[i]==null){
+    continue;
+  }
+  if (random_numbers.includes(i)){
+    document.write('<span class=random2>'+words[i].repeat([i]));
+  }
+  else {
+    document.write('<span>');
+  }
+  document.write(words[i] + '</span> ');
+
+}
+document.write("<a href='#' class='next'>Next</a>");
+
+//color slider
+function getTheColor( colorVal ) {
+  	var theColor = "";
+  	if ( colorVal < 50 ) {
+			    myRed = 255;
+			    myGreen = parseInt( ( ( colorVal * 2 ) * 255 ) / 100 );
+		  }
+	  else 	{
+			    myRed = parseInt( ( ( 100 - colorVal ) * 2 ) * 255 / 100 );
+			    myGreen = 255;
+		  }
+	  theColor = "rgb(" + myRed + "," + myGreen + ",0)"; 
+  	return( theColor ); 
+}
+
+function refreshSwatch() {
+	var coloredSlider = $( "#coloredSlider" ).slider( "value" ),
+	myColor = getTheColor( coloredSlider );
+  
+
+  //this part changes the color, put other stuff here
+	$( ".random2" ).css( "background-color", myColor );
+
+}
+
+$(function() {
+	  $( "#coloredSlider" ).slider({
+		    orientation: "horizontal",
+		    range: "min",
+		    max: 100,
+		    value: 0,
+		    slide: refreshSwatch,
+		    change: refreshSwatch
+        
+	  });
+});
+
+
+//generate rgb color random
+
+  function RandomColor(){
+    var colors = []
+    for(let i = 0; i < 3; i++){
+      colors.push(Math.floor(Math.random() * 255));
+    }
+    return "rgb("+colors[0]+","+ colors[1]+","+colors[2]+")";
+  }
+
+$('.random2').css({
+  'color': RandomColor(),
+  'background-color': RandomColor()
+});
+    
+var pages = [
+'/audio-clicker',
+'/censor-site'
+];
+
+var RandomPage = Math.floor(Math.random() * pages.length);
+$('.next').attr('href',pages[RandomPage]);
+console.log("next page", RandomPage);
+
+</script>
+</body>
+  </html>
