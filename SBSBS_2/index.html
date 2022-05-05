@@ -137,8 +137,6 @@ $('.random2').css({
   'background-color': RandomColor()
 });
 
-
-
 var pages = [
 '/audio-clicker',
 '/censor-site'
@@ -154,9 +152,20 @@ console.log("next page", RandomPage);
 // document.getElementById("next").onclick = function () {
  
   // can something go here?
-    // };
+  $(document).ready(function() {
+    $('#next').click(function() {
+      window.location.href = '/audio-clicker';
+      return false;
+    });
+    $('#nextRand').click(function() {
+      window.location.href = pages[RandomPage];
+      return false;
+    });
+  });
 </script>
 <button id="next">Next</button>
+<button id="nextRand">Next</button>
+
 
 </body>
   </html>
